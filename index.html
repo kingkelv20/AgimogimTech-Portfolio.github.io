@@ -1,0 +1,48 @@
+myfrontend/templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kelvin Agimogim's Portfolio</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Kelvin Agimogim's Portfolio</h1>
+        {% if userData %}
+            <div>
+                <h1>{{ userData.name }}</h1>
+                <p>Email: {{ userData.email }}</p>
+                <p>Location: {{ userData.location }}</p>
+                <p>Followers: {{ userData.followers }}</p>
+                <p>Following: {{ userData.following }}</p>
+                <p>Timezone: {{ userData.timezone }}</p>
+                <!-- Additional Information -->
+                <h2>Contact</h2>
+                <p>3 Iliya Barka, off SCC Road, Ushafa, FCT, Abuja, Nigeria 900271</p>
+                <p>Phone: 08063641215 / 07085557046</p>
+                <p>Email: kelvinagimogim@gmail.com</p>
+
+                <h2>Skills</h2>
+                <ul>
+                    <li>Pre-implantation Genetic Diagnosis</li>
+                    <li>General Medical Lab and Good Lab. Practice</li>
+                    <!-- Add more skills -->
+                    <li>Full Stack Software Engineering (Backend Specialization)</li>
+                </ul>
+
+                <h2>Additional Information</h2>
+                <p>I am a highly experienced Medical Lab. Scientist, Molecular and Life Science Application Specialist, with a deep understanding of patient care, empathy, and the delivery of high-quality healthcare services.</p>
+                <p>I am also a Full Stack Software Engineer with a specialization in backend development.</p>
+
+                <h3>AGIMOGIM KELVIN OJONG</h3>
+                <p>Medical Lab.Scientist & Molecular Specialist</p>
+
+                <!-- Education, Certificates, Work History, Awards, Affiliations, Reference, etc. -->
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
